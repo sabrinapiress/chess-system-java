@@ -2,8 +2,10 @@ package chess;
 
 import boardgame.Board;
 import boardgame.Position;
+import chess.pieces.Rei;
 import chess.pieces.Torre;
 
+//Classe Partida de Xadrez
 public class ChessMatch {
 	private Board board;
 	
@@ -26,5 +28,7 @@ public class ChessMatch {
 	
 	private void initialSetup() {
 		board.placePiece(new Torre(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new Rei(board, Color.WHITE), new Position(5, 3));
+		board.placePiece(new Torre(board, Color.WHITE), new Position(5, 2));
 	}
 }
